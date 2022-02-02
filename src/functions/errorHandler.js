@@ -1,4 +1,4 @@
-module.exports = (err, req, res) => {
+module.exports = (err, req, res, _next) => { // eslint-disable-line
   if (err.status) {    
     return res.status(err.status).json({ message: err.message });
   }
