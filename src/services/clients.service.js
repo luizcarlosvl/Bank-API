@@ -16,7 +16,7 @@ const clientCreateService = async (client) => {
   if (error) throw errorConstructor(badRequest, error.message);
 
   const newclient = await model.clientCreateModel(client);
-  console.log('passou aqui no teste')  
+  
   return newclient;
 };
 
