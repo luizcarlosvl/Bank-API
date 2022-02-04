@@ -4,7 +4,6 @@ const errorConstructor = require('../functions/errorHandling');
 const { conflict } = require('../utils/statusCode');
 
 const clientCreateModel = async (client) => {
-  
   const conn = await connect();
   
   const { cpf, name } = client;

@@ -1,11 +1,11 @@
 const { created } = require('../utils/statusCode');
-const { clientCreateService } = require('../services/clients.service');
+const service = require('../services/clients.service');
 
 const clientCreateController = async (req, res, next) => {
   try {
     const client = req.body;
 
-    const newClient = await clientCreateService(client);
+    const newClient = await service.clientCreateService(client);
 
     return res.status(created).json({ newClient });
 

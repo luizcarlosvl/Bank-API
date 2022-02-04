@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const { clientCreateModel } = require('../models/clients.model');
+const model = require('../models/clients.model');
 const { badRequest } = require('../utils/statusCode');
 
 const errorConstructor = require('../functions/errorHandling');
@@ -15,8 +15,8 @@ const clientCreateService = async (client) => {
 
   if (error) throw errorConstructor(badRequest, error.message);
 
-  const newclient = await clientCreateModel(client);
-  
+  const newclient = await model.clientCreateModel(client);
+  console.log('passou aqui no teste')  
   return newclient;
 };
 
