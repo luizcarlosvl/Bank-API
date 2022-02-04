@@ -2,9 +2,10 @@
 
 Instruções para executar o projeto:
 
-- instale as dependências **NPM INSTALL**
-- Inicie uma instâcia do **MongoDB** (no linux: $ sudo service mongod start)
-- Conecte a API **NPM START**
+- instale as dependências **npm install**
+- Inicie uma instâcia do **MongoDB** (no linux: sudo service mongod start)
+- Conecte a API **npm start**
+- execute os testes unitários **npm test**
 
 Como utilizar a API:
 
@@ -26,3 +27,17 @@ Como utilizar a API:
 	"cpfReceiver": "00000000000", <br>
 	"value": 0 <br>
 } <br>
+
+- para consultar o saldo de um cliente - faça uma requisição GET no endpoint http://localhost:3000/balances com o JSON no seguinte formato: <br>
+{ <br>
+  "cpf": "00000000000" <br>
+} <br>
+# 
+<h4> Tecnologias utilizadas <h4>
+
+- NodeJS
+- ExpressJS
+- MongoDB
+- Joy
+- Mocha
+- Chai
